@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#07172b">
+  <title>RamcyJonathan Football Game 2027</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">RJ<span>27</span></div>
+    <div><div class="eyebrow">RAMCY ATTICUS EDITION</div><h1>RAMCYJONATHAN <b>FOOTBALL GAME</b> <em>2027</em></h1></div>
+    <button id="installBtn" class="install-btn" hidden>Install App</button>
+  </header>
+
+  <main>
+    <section class="hero panel">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR CLUB. YOUR COUNTRY. YOUR LEGACY.</p>
+        <h2>PLAY YOUR<br><span>WAY.</span></h2>
+        <p class="sub">Build your team, choose your players, and take the match to the final whistle.</p>
+        <div class="hero-actions">
+          <button class="primary" data-view="match">▶ PLAY MATCH</button>
+          <button class="secondary" data-view="team">MANAGE TEAM</button>
+        </div>
+        <div class="status-line"><span class="live-dot"></span> SEASON 2026–2027 <span class="divider">|</span> LOCAL DEMO</div>
+      </div>
+      <div class="hero-ball" aria-hidden="true"><div class="ball">⚽</div><div class="orbit orbit1"></div><div class="orbit orbit2"></div></div>
+    </section>
+
+    <section class="section-head"><div><p class="eyebrow">GAME CENTER</p><h2>Choose your next move</h2></div></section>
+    <section class="menu-grid">
+      <button class="menu-card card-match" data-view="match"><span class="menu-icon">⚽</span><strong>PLAY MATCH</strong><small>Kick off and score goals</small><span class="arrow">↗</span></button>
+      <button class="menu-card card-team" data-view="team"><span class="menu-icon">👕</span><strong>MANAGE TEAM</strong><small>Pick your starting eleven</small><span class="arrow">↗</span></button>
+      <button class="menu-card card-player" data-view="players"><span class="menu-icon">⭐</span><strong>MY PLAYERS</strong><small>Meet your featured stars</small><span class="arrow">↗</span></button>
+      <button class="menu-card card-training" data-view="training"><span class="menu-icon">🎯</span><strong>TRAINING</strong><small>Improve your skills</small><span class="arrow">↗</span></button>
+      <button class="menu-card card-coach" data-view="coaches"><span class="menu-icon">🧢</span><strong>COACHES</strong><small>Choose your manager</small><span class="arrow">↗</span></button>
+      <button class="menu-card card-stadium" data-view="stadium"><span class="menu-icon">🏟️</span><strong>STADIUM</strong><small>Crowds, officials and matchday</small><span class="arrow">↗</span></button>
+    </section>
+
+    <section id="view" class="panel content-panel">
+      <div class="section-head"><div><p class="eyebrow">MATCH DAY</p><h2>Start a friendly</h2></div><span class="badge">DEMO MODE</span></div>
+      <div class="matchup">
+        <div class="team-badge liberia"><span>🇱🇷</span><strong>LIBERIA</strong><small>HOME TEAM</small></div>
+        <div class="vs">VS</div>
+        <div class="team-badge ghana"><span>🇬🇭</span><strong>GHANA</strong><small>AWAY TEAM</small></div>
+      </div>
+      <div class="match-info"><span>🏟️ RJ27 National Stadium</span><span>⏱️ 90-minute match concept</span></div>
+      <button id="kickoffBtn" class="primary full">START MATCH</button>
+      <p class="note">This is a starter game interface with a simple playable 2D demo—not yet a full 3D football simulator.</p>
+    </section>
+
+    <section class="featured">
+      <div class="section-head"><div><p class="eyebrow">RJ27 FEATURED PLAYERS</p><h2>Our rising stars</h2></div><button class="text-btn" data-view="players">View all ↗</button></div>
+      <div class="player-grid">
+        <article class="player-card"><div class="player-art redblue"><span>14</span><i>🇱🇷</i></div><div class="player-details"><strong>Jonathan Tartoe</strong><small>LIBERIA · FORWARD</small><div class="stats"><span>PACE <b>88</b></span><span>SHOT <b>84</b></span><span>SKILL <b>86</b></span></div></div></article>
+        <article class="player-card"><div class="player-art redblue"><span>10</span><i>🇱🇷</i></div><div class="player-details"><strong>Ramcy S. James</strong><small>LIBERIA · MIDFIELDER</small><div class="stats"><span>PACE <b>85</b></span><span>PASS <b>89</b></span><span>SKILL <b>87</b></span></div></div></article>
+        <article class="player-card"><div class="player-art bluegold"><span>09</span><i>🌍</i></div><div class="player-details"><strong>Academy Striker</strong><small>RJ27 ACADEMY · FORWARD</small><div class="stats"><span>PACE <b>82</b></span><span>SHOT <b>80</b></span><span>SKILL <b>78</b></span></div></div></article>
+      </div>
+    </section>
+
+    <section class="panel game-area" id="gameArea" hidden>
+      <div class="section-head"><div><p class="eyebrow">LIVE DEMO</p><h2>Liberia vs Ghana</h2></div><div id="score" class="score">LIB 0 — 0 GHA</div></div>
+      <canvas id="pitch" width="900" height="520" aria-label="Simple football game"></canvas>
+      <div class="stat-grid"><div class="stat-box"><strong id="shotsStat">0</strong><small>SHOTS</small></div><div class="stat-box"><strong id="passesStat">0</strong><small>PASSES</small></div><div class="stat-box"><strong>50%</strong><small>POSSESSION</small></div><div class="stat-box"><strong>🙌</strong><small>FANS CHEERING</small></div></div>
+      <div class="game-controls">
+        <div class="dpad"><button data-move="up">▲</button><div><button data-move="left">◀</button><button data-move="down">▼</button><button data-move="right">▶</button></div></div>
+        <div class="action-buttons"><button id="passBtn">PASS</button><button id="shootBtn" class="shoot">SHOOT ⚽</button></div>
+      </div>
+      <p class="note">Move with the arrows or WASD. Get near the ball and press SHOOT. Tap EXIT MATCH to return.</p>
+      <button id="exitMatch" class="secondary full">EXIT MATCH</button>
+    </section>
+  </main>
+  <footer><div class="brand-mark small">RJ<span>27</span></div><p>RAMCY ATTICUS EDITION · 2026–2027</p><small>Fan-made independent project. Not affiliated with FIFA, EA SPORTS, clubs, or leagues.</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>
